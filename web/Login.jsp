@@ -19,7 +19,7 @@
             <p id="profile-name" class="profile-name-card"></p>
             <form  method="post" action="src\fr\eni\eniAsk\controller\validate.jsp" class="form-signin">
                 <span id="reauth-email" class="reauth-email"></span>
-                <input type="text" id="inputEmail"  name="username" class="form-control" placeholder="Adresse e-mail" required autofocus>
+                <input type="email" id="inputEmail"  name="username" class="form-control" placeholder="Adresse e-mail" required autofocus>
                 <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
                 
                 <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
