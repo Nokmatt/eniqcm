@@ -16,7 +16,7 @@
         pst.setString(2, password);
         ResultSet rs = pst.executeQuery();                        
         if(rs.next())           
-           out.println("Valid login credentials");        
+           out.println("Connecté !</br>"+username+"");        
         else
            out.println("Invalid login credentials");            
    }
