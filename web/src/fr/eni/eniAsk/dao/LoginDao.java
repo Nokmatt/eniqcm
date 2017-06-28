@@ -20,9 +20,10 @@ import src.fr.eni.eniAsk.dao.Connect;
 public class LoginDao {
     
     public Boolean validateLogin(String username, String password){
+        Boolean isconnecte = null;
         try{
        
-        Boolean connecté = null;
+        
         Connect conn = new Connect();
        
         
@@ -32,13 +33,13 @@ public class LoginDao {
         pst.setString(2, password);
         ResultSet rs = pst.executeQuery();                        
         if(rs.next())           
-          connecté = true;
+          isconnecte = true;
         else
-            connecté = false;           
+            isconnecte = false;           
    }
    catch(Exception e){       
-            connecté = false; 
+            isconnecte = false; 
    }      
-        return connecté;
+        return isconnecte;
     }
 }
