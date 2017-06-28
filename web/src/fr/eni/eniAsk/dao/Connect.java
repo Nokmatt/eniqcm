@@ -1,4 +1,4 @@
-package src.fr.eni.eniAsk.controller;
+package src.fr.eni.eniAsk.dao;
 
 import java.sql.Connection;
 import com.mysql.jdbc.PreparedStatement;
