@@ -8,6 +8,7 @@ package fr.eni.eniAsk.Model;
 import fr.eni.eniAsk.Model.Theme;
 import fr.eni.eniAsk.Model.ReponseSys;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -22,8 +23,17 @@ public class Question {
     private String typeReponse;
     private Integer nbReponse;
     private Integer nbBonnesReponses;
-    private Theme idTheme;
+    private Integer idTheme;
+    private Date datecreation;
     private ArrayList<ReponseSys> reponsesSysList;
+
+    public Date getDatecreation() {
+        return datecreation;
+    }
+
+    public void setDatecreation(Date datecreation) {
+        this.datecreation = datecreation;
+    }
 
     public ArrayList<ReponseSys> getReponsesSysList() {
         return reponsesSysList;
@@ -81,11 +91,11 @@ public class Question {
         this.nbBonnesReponses = nbBonnesReponses;
     }
 
-    public Theme getIdTheme() {
+    public Integer getIdTheme() {
         return idTheme;
     }
 
-    public void setIdTheme(Theme idTheme) {
+    public void setIdTheme(Integer idTheme) {
         this.idTheme = idTheme;
     }
 
@@ -93,12 +103,12 @@ public class Question {
     public String toString() {
         return "Question{" + "enonce=" + enonce + ", idQuestion=" + idQuestion + ", lienImage=" + lienImage + ", typeReponse=" + typeReponse + ", nbReponse=" + nbReponse + ", nbBonnesReponses=" + nbBonnesReponses + ", idTheme=" + idTheme + '}';
     }
-    
+
     public Question() {
         super();
     }
-    
-    public Question(String enonce, Integer idQuestion, String lienImage, String typeReponse, Integer nbReponse, Integer nbBonnesReponses, Theme idTheme) {
+
+    public Question(String enonce, Integer idQuestion, String lienImage, String typeReponse, Integer nbReponse, Integer nbBonnesReponses, Integer idTheme) {
         this.enonce = enonce;
         this.idQuestion = idQuestion;
         this.lienImage = lienImage;
@@ -107,6 +117,5 @@ public class Question {
         this.nbBonnesReponses = nbBonnesReponses;
         this.idTheme = idTheme;
     }
-
 
 }
