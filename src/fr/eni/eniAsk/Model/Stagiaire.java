@@ -1,4 +1,4 @@
-package src.fr.eni.eniAsk.Model;
+package fr.eni.eniAsk.Model;
 
 import java.util.ArrayList;
 import java.util.List;

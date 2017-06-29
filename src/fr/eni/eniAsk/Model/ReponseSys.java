@@ -1,7 +1,8 @@
 
 
-package src.fr.eni.eniAsk.Model;
-import src.fr.eni.eniAsk.Model.Question;
+package fr.eni.eniAsk.Model;
+
+import fr.eni.eniAsk.Model.Question;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

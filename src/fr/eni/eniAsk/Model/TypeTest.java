@@ -1,4 +1,4 @@
-package src.fr.eni.eniAsk.Model;
+package fr.eni.eniAsk.Model;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -9,8 +9,8 @@ package src.fr.eni.eniAsk.Model;
  *
  * @author ETY0002
  */
-public class Formateur extends Personne {
+public class TypeTest {
 
-    private Integer idFormateur;
-
+    private Integer idTypeTest;
+    private String libelleTypeTest;
 }

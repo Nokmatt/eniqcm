@@ -1,11 +1,10 @@
-package src.fr.eni.eniAsk.servlet;
+package fr.eni.eniAsk.servlet;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -13,7 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import src.fr.eni.eniAsk.dao.LoginDao;
+import fr.eni.eniAsk.dao.LoginDao;
 
 /**
  *
@@ -39,7 +38,7 @@ public class Login extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Login</title>");            
+            out.println("<title>Servlet Login</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet Login at " + request.getContextPath() + "</h1>");
@@ -78,10 +77,10 @@ public class Login extends HttpServlet {
         String username = request.getParameter("username");
         String pass = request.getParameter("password");
         LoginDao loginDao = new LoginDao();
-        Boolean isLogged =  loginDao.validateLogin(username,pass);
-        if(isLogged){
+        Boolean isLogged = loginDao.validateLogin(username, pass);
+        if (isLogged) {
             this.getServletContext().getRequestDispatcher("choixtest.html").forward(request, response);
-            
+
         }
     }
 

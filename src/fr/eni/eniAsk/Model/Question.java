@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package src.fr.eni.eniAsk.Model;
+package fr.eni.eniAsk.Model;
 
+import fr.eni.eniAsk.Model.Theme;
+import fr.eni.eniAsk.Model.ReponseSys;
 import java.util.ArrayList;
 import java.util.List;
 
