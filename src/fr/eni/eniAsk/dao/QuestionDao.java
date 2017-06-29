@@ -101,4 +101,25 @@ public class QuestionDao {
             }
         }
     }
+    
+    public Boolean getAll() {
+        Boolean isconnecte = null;
+        try {
+
+            Connect conn = new Connect();
+
+            PreparedStatement pst = conn.connexionDb().prepareStatement("Select * from Questions");
+
+            
+            ResultSet rs = pst.executeQuery();
+            if (rs.next()) {
+                isconnecte = true;
+            } else {
+                isconnecte = false;
+            }
+        } catch (Exception e) {
+            isconnecte = false;
+        }
+        return isconnecte;
+    }
 }
