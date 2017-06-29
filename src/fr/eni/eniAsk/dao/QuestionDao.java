@@ -9,6 +9,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import fr.eni.eniAsk.Model.Question;
 import fr.eni.eniAsk.dao.Connect;
+import java.util.Date;
+import java.util.List;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -102,24 +104,29 @@ public class QuestionDao {
         }
     }
     
-    public Boolean getAll() {
-        Boolean isconnecte = null;
+    public Question getQuestionByid(int id) {
+         Question questions = new Question();
         try {
 
             Connect conn = new Connect();
+           
+            PreparedStatement pst = conn.connexionDb().prepareStatement("Select * from Questions where id=?");
 
-            PreparedStatement pst = conn.connexionDb().prepareStatement("Select * from Questions");
-
-            
+            pst.setInt(1, id);
             ResultSet rs = pst.executeQuery();
-            if (rs.next()) {
-                isconnecte = true;
-            } else {
-                isconnecte = false;
-            }
+           if (rs.next()) {
+                
+                String enonce = rs.getString("enonce");
+                questions.setEnonce(enonce);
+                Date dateCreation = rs.getDate("date_creation");
+                questions.setDatecreation(dateCreation);
+                int themeId = rs.getInt("themes_id");
+                questions.setIdTheme(themeId);
+            } 
+           
         } catch (Exception e) {
-            isconnecte = false;
-        }
-        return isconnecte;
+            }
+        
+        return questions;
     }
 }
