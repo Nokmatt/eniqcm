@@ -20,7 +20,7 @@ and open the template in the editor.
 
     </head>
     <body>
-        <div class="left_side_bar">
+        <div  class="left_side_bar container">
             <span><!--Nom & prÈnom candidat-->Marie Van Der Beek</span><br>
             <span><!--Type de test en cours-->Test de logique</span><br>
             <span><!--Nom du test en cours-->Tests psychotechniques - Niveau 1</span><br>
@@ -34,8 +34,9 @@ and open the template in the editor.
             <br>
             <span><a href="">Synth√®se du test</a></span>
         </div>
+        
 
-        <div class="content">
+        <div class="container">
 
             <!-- tableau question -->
             <table>
@@ -79,7 +80,7 @@ and open the template in the editor.
                 </tr>
             </table>
         </div>
-        <div class="navbar">
+        <div class="navbar container">
             <input type="button" value="<< PrÈcÈdente">
             <input type="submit" value="Valider">
             <input type="button" value="Suivante >>">

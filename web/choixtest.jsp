@@ -32,7 +32,7 @@ and open the template in the editor.
         </div>
         <div>
             <p>Choisissez votre test : </p>
-            <form method="POST" action="">
+            <form method="POST" action="ecranquestion.jsp">
                 <!-- Choix type de test sous forme d'une liste items-->
                 <table>
                     <tr>
