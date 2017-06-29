@@ -1,7 +1,6 @@
 <%-- 
     Document   : Login
-    Created on : 28 Feb, 2015, 8:50:26 AM
-    Author     : Lahaul Seth
+
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
